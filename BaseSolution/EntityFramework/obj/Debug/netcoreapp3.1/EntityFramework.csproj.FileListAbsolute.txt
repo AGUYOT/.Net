@@ -1,0 +1,8 @@
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\bin\Debug\netcoreapp3.1\EntityFramework.deps.json
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\obj\Debug\netcoreapp3.1\EntityFramework.csprojAssemblyReference.cache
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\obj\Debug\netcoreapp3.1\EntityFramework.AssemblyInfoInputs.cache
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\obj\Debug\netcoreapp3.1\EntityFramework.AssemblyInfo.cs
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\bin\Debug\netcoreapp3.1\EntityFramework.runtimeconfig.json
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\bin\Debug\netcoreapp3.1\EntityFramework.runtimeconfig.dev.json
+C:\Users\Etudiant\Documents\.Net\BaseSolution\EntityFramework\obj\Debug\netcoreapp3.1\EntityFramework.genruntimeconfig.cache
