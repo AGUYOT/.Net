@@ -43,3 +43,4 @@ C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\Newtonsoft.Json.dll

@@ -33,7 +33,10 @@
         <ComboBox x:Name="deviseBox" Width="500"
                   Height="80"
                   RelativePanel.Below="deviseText"
-                  RelativePanel.AlignHorizontalCenterWithPanel="True">
+                  RelativePanel.AlignHorizontalCenterWithPanel="True"
+                  ItemsSource="{Binding}"
+                  SelectedValuePath="Id"
+                  DisplayMemberPath="NomDevise">
         </ComboBox>
 
         <Button x:Name="convertButton" Width="500"

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientConvertisseurV1.Service;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,14 @@ namespace ClientConvertisseurV1
         public MainPage()
         {
             this.InitializeComponent();
+            this.InitializeData();
+        }
+
+        public async void InitializeData()
+        {
+            WSService service = WSService.GetInstance();
+            var result = await service.GetDevisesAsync();
+            this.deviseBox.DataContext = result.ToList();
         }
     }
 }

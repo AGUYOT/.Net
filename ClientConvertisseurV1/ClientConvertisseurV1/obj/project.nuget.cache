@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yoEI+OLy3NeZAF1xqLB8T8GrxNDy5SXGPOwzY2/cD6Vi8QCvaYPgwmfLHSFLj2MU/EwvJoDSQIJlLPgGhfVGUg==",
+  "dgSpecHash": "Z9UfQk3e8RbuQj3ThqOXc+QU4s9faFv4nFlKE8Q9E64IQL555xR6hQrc1AxB/ofPv1mh4ULfpnI62WtErjLsnQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Etudiant\\Documents\\.Net\\ClientConvertisseurV1\\ClientConvertisseurV1\\ClientConvertisseurV1.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.platforms\\2.1.0\\microsoft.netcore.platforms.2.1.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.netcore.universalwindowsplatform\\6.2.10\\microsoft.netcore.universalwindowsplatform.6.2.10.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Etudiant\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.2.10\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.2.10.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.compiler\\2.2.8-rel-28605-00\\runtime.win10-arm.microsoft.net.native.compiler.2.2.8-rel-28605-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\runtime.win10-arm.microsoft.net.native.sharedlibrary\\2.2.7-rel-28605-00\\runtime.win10-arm.microsoft.net.native.sharedlibrary.2.2.7-rel-28605-00.nupkg.sha512",

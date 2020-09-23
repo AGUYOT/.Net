@@ -8,8 +8,61 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <RelativePanel>
+        <TextBlock x:ConnectionId='2' x:Name="convertText" FontSize="70px" Margin="20">
+            Convertisseur
+        </TextBlock>
+        <TextBlock x:ConnectionId='3' x:Name="amountText" FontSize="40px" RelativePanel.Below="convertText"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Margin="15">
+            Montant en Euros
+        </TextBlock>
 
-    </Grid>
+        <TextBox x:ConnectionId='4' x:Name="amountBox" RelativePanel.Below="amountText" 
+                 RelativePanel.AlignHorizontalCenterWithPanel="True"
+                 Width="500"
+                 Height="80">
+        </TextBox>
+
+        <TextBlock x:ConnectionId='5' x:Name="deviseText" FontSize="40px" RelativePanel.Below="amountBox"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Margin="15">
+            Devise
+        </TextBlock>
+
+        <ComboBox x:ConnectionId='6' x:Name="deviseBox" Width="500"
+                  Height="80"
+                  RelativePanel.Below="deviseText"
+                  RelativePanel.AlignHorizontalCenterWithPanel="True"
+                  ItemsSource="{Binding}"
+                  SelectedValuePath="Id"
+                  DisplayMemberPath="NomDevise">
+        </ComboBox>
+
+        <Button x:ConnectionId='7' x:Name="convertButton" Width="500"
+                  Height="80"
+                  RelativePanel.Below="deviseBox"
+                  RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Margin="40"
+                FontSize="40px">
+            Convertir
+        </Button>
+
+        <TextBlock x:ConnectionId='8' x:Name="convertedText"
+                   FontSize="40px"
+                   RelativePanel.Below="convertButton"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Margin="15">
+            Montant en devise
+        </TextBlock>
+
+        <TextBox x:ConnectionId='9' x:Name="convertedBox" RelativePanel.Below="convertedText" 
+                 RelativePanel.AlignHorizontalCenterWithPanel="True"
+                 Width="500"
+                 Height="80"
+                 IsReadOnly="True">
+        </TextBox>
+
+    </RelativePanel>
 </Page>
 
