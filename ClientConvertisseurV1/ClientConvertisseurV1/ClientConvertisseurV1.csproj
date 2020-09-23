@@ -124,7 +124,10 @@
     </Compile>
     <Compile Include="Model\Devise.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service\WSService.cs" />
+    <Compile Include="Service\IConvertService.cs" />
+    <Compile Include="Service\Implementation\ConvertService.cs" />
+    <Compile Include="Service\IWSService.cs" />
+    <Compile Include="Service\Implementation\WSService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

@@ -1,18 +1,9 @@
-﻿using ClientConvertisseurV1.Service;
+﻿using ClientConvertisseurV1.Model;
+using ClientConvertisseurV1.Service.Implementation;
 using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -26,21 +17,46 @@ namespace ClientConvertisseurV1
         public MainPage()
         {
             this.InitializeComponent();
+            this.InitializeError();
             this.InitializeData();
         }
 
+        private void InitializeError()
+        {
+            this.errorText.Text = "";
+            this.errorText.Visibility = Visibility.Collapsed;
+        }
         public async void InitializeData()
         {
             WSService service = WSService.GetInstance();
             var result = await service.GetDevisesAsync();
             this.deviseBox.DataContext = result.ToList();
+            this.deviseBox.SelectedValue = 1;
         }
 
-        public void ConvertCurrency_Click()
+        private void ConvertCurrency_Click(object sender, RoutedEventArgs e)
         {
-            if(String.IsNullOrEmpty(this.amountBox.Text))
+            if(!String.IsNullOrEmpty(this.amountBox.Text))
             {
+                int value;
+                ConvertService service = new ConvertService();
 
+                if(!int.TryParse(this.amountBox.Text, out value))
+                {
+                    this.errorText.Text = "La valeur que vous avez tapé est invalide !";
+                    this.errorText.Visibility = Visibility.Visible;
+                } else
+                {
+                    this.InitializeError();
+                }
+                Devise devise = (Devise)this.deviseBox.SelectedItem;
+                double result = service.Convert(value, devise.Taux);
+                this.convertedBox.Text = result.ToString();
+            }
+            else
+            {
+                this.errorText.Text = "Veuillez entrer une valeur !";
+                this.errorText.Visibility = Visibility.Visible;
             }
         }
     }

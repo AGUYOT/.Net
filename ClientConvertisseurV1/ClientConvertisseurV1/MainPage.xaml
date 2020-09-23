@@ -9,10 +9,16 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <RelativePanel>
-        <TextBlock x:Name="convertText" FontSize="70px" Margin="20">
+        <TextBlock x:Name="convertText" FontSize="70px" Margin="15">
             Convertisseur
         </TextBlock>
-        <TextBlock x:Name="amountText" FontSize="40px" RelativePanel.Below="convertText"
+        <TextBlock x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Margin="20"
+                   FontStyle="Normal"
+                   Foreground="Red">
+        </TextBlock>
+        <TextBlock x:Name="amountText" FontSize="40px" RelativePanel.Below="errorText"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Margin="15">
             Montant en Euros
@@ -21,7 +27,8 @@
         <TextBox x:Name="amountBox" RelativePanel.Below="amountText" 
                  RelativePanel.AlignHorizontalCenterWithPanel="True"
                  Width="500"
-                 Height="80">
+                 Height="80"
+                 FontSize="40px">
         </TextBox>
 
         <TextBlock x:Name="deviseText" FontSize="40px" RelativePanel.Below="amountBox"
@@ -36,7 +43,8 @@
                   RelativePanel.AlignHorizontalCenterWithPanel="True"
                   ItemsSource="{Binding}"
                   SelectedValuePath="Id"
-                  DisplayMemberPath="NomDevise">
+                  DisplayMemberPath="NomDevise"
+                  FontSize="40px">
         </ComboBox>
 
         <Button x:Name="convertButton" Width="500"
@@ -61,7 +69,8 @@
                  RelativePanel.AlignHorizontalCenterWithPanel="True"
                  Width="500"
                  Height="80"
-                 IsReadOnly="True">
+                 IsReadOnly="True"
+                 FontSize="40px">
         </TextBox>
 
     </RelativePanel>

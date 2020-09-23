@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
 
-namespace ClientConvertisseurV1.Service
+namespace ClientConvertisseurV1.Service.Implementation
 {
-    public class WSService
+    public class WSService : IWSService
     {
         private static WSService instance;
         private static readonly HttpClient client = new HttpClient();
