@@ -35,5 +35,13 @@ namespace ClientConvertisseurV1
             var result = await service.GetDevisesAsync();
             this.deviseBox.DataContext = result.ToList();
         }
+
+        public void ConvertCurrency_Click()
+        {
+            if(String.IsNullOrEmpty(this.amountBox.Text))
+            {
+
+            }
+        }
     }
 }

@@ -40,11 +40,12 @@
         </ComboBox>
 
         <Button x:Name="convertButton" Width="500"
-                  Height="80"
-                  RelativePanel.Below="deviseBox"
-                  RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Height="80"
+                RelativePanel.Below="deviseBox"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Margin="40"
-                FontSize="40px">
+                FontSize="40px"
+                Click="ConvertCurrency_Click">
             Convertir
         </Button>
 
