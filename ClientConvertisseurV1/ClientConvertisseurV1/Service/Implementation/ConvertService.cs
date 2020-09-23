@@ -5,8 +5,8 @@
         //Return true if the value can be converted, false eitherway
         public bool TryConvert(string valueTxt, double taux, out double result)
         {
-            int value;
-            if(!int.TryParse(valueTxt, out value))
+            double value;
+            if(!double.TryParse(valueTxt, out value))
             {
                 result = 0;
                 return false;

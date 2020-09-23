@@ -88,6 +88,12 @@
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\bin\x86\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\bin\x86\Debug\View\RevertPage.xbf">
+      <PackagePath>View\RevertPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\bin\x86\Debug\View\RootPage.xbf">
+      <PackagePath>View\RootPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>

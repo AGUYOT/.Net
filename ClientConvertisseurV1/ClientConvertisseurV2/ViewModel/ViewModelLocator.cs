@@ -23,6 +23,7 @@ namespace ClientConvertisseurV2.ViewModel
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<MainViewModel>();
+            SimpleIoc.Default.Register<RevertViewModel>();
             SimpleIoc.Default.Register<ConvertService>();
             SimpleIoc.Default.Register<WSService>();
         }
@@ -30,5 +31,10 @@ namespace ClientConvertisseurV2.ViewModel
         /// Gets the Main property.
         /// </summary>
         public MainViewModel Main => ServiceLocator.Current.GetInstance<MainViewModel>();
+
+        /// <summary>
+        /// Gets the Revert property.
+        /// </summary>
+        public RevertViewModel Revert => ServiceLocator.Current.GetInstance<RevertViewModel>();
     }
 }

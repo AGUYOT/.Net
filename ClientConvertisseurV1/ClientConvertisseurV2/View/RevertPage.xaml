@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ClientConvertisseurV2.View.MainPage"
+    x:Class="ClientConvertisseurV2.View.RevertPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ClientConvertisseurV2.View"
@@ -7,11 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    DataContext="{Binding Main, Source={StaticResource Locator}}">
+    DataContext="{Binding Revert, Source={StaticResource Locator}}">
 
     <RelativePanel>
         <TextBlock x:Name="convertText" FontSize="70px" Margin="15">
-            Convertisseur Euros->Devises
+            Convertisseur Devises->Euros
         </TextBlock>
         <TextBlock x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -24,7 +24,7 @@
         <TextBlock x:Name="amountText" FontSize="40px" RelativePanel.Below="errorText"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Margin="15">
-            Montant en Euros
+            Montant en Devise
         </TextBlock>
 
         <TextBox x:Name="amountBox" RelativePanel.Below="amountText" 
@@ -32,7 +32,7 @@
                  Width="500"
                  Height="80"
                  FontSize="40px"
-                 Text="{Binding MontantEuros, Mode=TwoWay}">
+                 Text="{Binding MontantDevise, Mode=TwoWay}">
         </TextBox>
 
         <TextBlock x:Name="deviseText" FontSize="40px" RelativePanel.Below="amountBox"
@@ -67,7 +67,7 @@
                    RelativePanel.Below="convertButton"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Margin="15">
-            Montant en devise
+            Montant en euro
         </TextBlock>
 
         <TextBox x:Name="convertedBox" RelativePanel.Below="convertedText" 

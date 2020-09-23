@@ -52,3 +52,13 @@ C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RevertPage.g.i.cs
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RevertPage.g.cs
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RevertPage.xaml
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RevertPage.xbf
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\bin\x86\Debug\View\RevertPage.xbf
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RootPage.g.i.cs
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RootPage.g.cs
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RootPage.xaml
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\obj\x86\Debug\View\RootPage.xbf
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV2\bin\x86\Debug\View\RootPage.xbf

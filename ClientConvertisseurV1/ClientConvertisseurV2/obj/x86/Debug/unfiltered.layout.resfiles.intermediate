@@ -9,4 +9,6 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 ClientConvertisseurV2.xr.xml
 View\MainPage.xbf
+View\RevertPage.xbf
+View\RootPage.xbf
 Properties\Default.rd.xml

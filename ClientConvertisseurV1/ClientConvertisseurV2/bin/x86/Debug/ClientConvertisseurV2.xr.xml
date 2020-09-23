@@ -11,6 +11,8 @@
     <RootPropertyPathName Name="MontantEuros" />
     <RootPropertyPathName Name="ErrorLabelVisibility" />
     <RootPropertyPathName Name="ErrorLabelText" />
+    <RootPropertyPathName Name="Revert" />
+    <RootPropertyPathName Name="MontantDevise" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -44,6 +46,7 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Width" />
@@ -68,7 +71,26 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="Command" />
       <RootProperty Name="Content" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Background" />
+      <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="ClientConvertisseurV2.View.MainPage" />
+    <RootType FullName="ClientConvertisseurV2.View.RevertPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.SplitView">
+      <RootProperty Name="DisplayMode" />
+      <RootProperty Name="IsPaneOpen" />
+      <RootProperty Name="CompactPaneLength" />
+      <RootProperty Name="OpenPaneLength" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Pane" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Grid" />
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
+    </RootType>
+    <RootType FullName="ClientConvertisseurV2.View.RootPage" />
   </Roots.RootTypes>
 </Roots>
