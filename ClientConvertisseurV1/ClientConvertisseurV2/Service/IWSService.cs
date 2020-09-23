@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace ClientConvertisseurV2.Service
 {
-    interface IWSService
+    public interface IWSService
     {
         Task<IEnumerable<Devise>> GetDevisesAsync();
     }

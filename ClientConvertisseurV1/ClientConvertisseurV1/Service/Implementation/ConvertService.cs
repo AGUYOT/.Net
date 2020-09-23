@@ -2,6 +2,7 @@
 {
     class ConvertService : IConvertService
     {
+        //Return true if the value can be converted, false eitherway
         public bool TryConvert(string valueTxt, double taux, out double result)
         {
             int value;

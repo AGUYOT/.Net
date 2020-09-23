@@ -13,30 +13,31 @@ namespace ClientConvertisseurV2.Service.Implementation
 {
     public class WSService : IWSService
     {
-        private static WSService instance;
-        private static readonly HttpClient client = new HttpClient();
+        private static readonly HttpClient _client = new HttpClient();
         
         public WSService()
         {
-            client.BaseAddress = new Uri("http://localhost:5000/api/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
+            _client.BaseAddress = new Uri("http://localhost:5000/api/");
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-        }
-
-        public static WSService GetInstance()
-        {
-            if(instance == null)
-            {
-                instance = new WSService();
-            }
-            return instance;
         }
 
         public async Task<IEnumerable<Devise>> GetDevisesAsync()
         {
-            HttpResponseMessage response = await client.GetAsync("devise");
-            response.EnsureSuccessStatusCode();
+            HttpResponseMessage response = null;
+            try
+            {
+                response = await _client.GetAsync("devise");
+                response.EnsureSuccessStatusCode();
+            } catch(TimeoutException e)
+            {
+                throw e;
+            } catch (Exception e)
+            {
+                throw e;
+            }
+
             string responseBody = await response.Content.ReadAsStringAsync();
 
             IEnumerable<Devise> devises = JsonConvert.DeserializeObject<IEnumerable<Devise>>(responseBody);

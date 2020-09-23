@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="ClientConvertisseurV2.View.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClientConvertisseurV2.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+    <RelativePanel>
+        <TextBlock x:ConnectionId='2' x:Name="convertText" FontSize="70px" Margin="15">
+            Convertisseur
+        </TextBlock>
+        <TextBlock x:ConnectionId='3' x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Margin="20"
+                   FontStyle="Normal"
+                   Foreground="Red"
+                   Visibility="{Binding ErrorLabelVisibility, Mode=OneWay}"
+                   Text="{Binding ErrorLabelText, Mode=OneWay}">
+        </TextBlock>
+        <TextBlock x:ConnectionId='4' x:Name="amountText" FontSize="40px" RelativePanel.Below="errorText"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Margin="15">
+            Montant en Euros
+        </TextBlock>
+
+        <TextBox x:ConnectionId='5' x:Name="amountBox" RelativePanel.Below="amountText" 
+                 RelativePanel.AlignHorizontalCenterWithPanel="True"
+                 Width="500"
+                 Height="80"
+                 FontSize="40px"
+                 Text="{Binding MontantEuros, Mode=TwoWay}">
+        </TextBox>
+
+        <TextBlock x:ConnectionId='6' x:Name="deviseText" FontSize="40px" RelativePanel.Below="amountBox"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                    Margin="15">
+            Devise
+        </TextBlock>
+
+        <ComboBox x:ConnectionId='7' x:Name="deviseBox" Width="500"
+                  Height="80"
+                  RelativePanel.Below="deviseText"
+                  RelativePanel.AlignHorizontalCenterWithPanel="True"
+                  ItemsSource="{Binding ComboBoxDevises}"
+                  SelectedValuePath="Id"
+                  DisplayMemberPath="NomDevise"
+                  FontSize="40px"
+                  SelectedItem="{Binding ComboBoxDeviseItem,Mode=TwoWay}">
+        </ComboBox>
+
+        <Button x:ConnectionId='8' x:Name="convertButton" Width="500"
+                Height="80"
+                RelativePanel.Below="deviseBox"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Margin="40"
+                FontSize="40px"
+                Command="{Binding BtnSetConversion}">
+            Convertir
+        </Button>
+
+        <TextBlock x:ConnectionId='9' x:Name="convertedText"
+                   FontSize="40px"
+                   RelativePanel.Below="convertButton"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Margin="15">
+            Montant en devise
+        </TextBlock>
+
+        <TextBox x:ConnectionId='10' x:Name="convertedBox" RelativePanel.Below="convertedText" 
+                 RelativePanel.AlignHorizontalCenterWithPanel="True"
+                 Width="500"
+                 Height="80"
+                 IsReadOnly="True"
+                 FontSize="40px"
+                 Text="{Binding ResultText, Mode=OneWay}">
+        </TextBox>
+
+    </RelativePanel>
+</Page>
+

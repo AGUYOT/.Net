@@ -10,7 +10,6 @@ C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\bin
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\ClientConvertisseurV1.build.appxrecipe
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\System.Runtime.dll
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
-C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\ClientConvertisseurV1.csprojAssemblyReference.cache
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\App.g.i.cs
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\App.g.cs
 C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\obj\x86\Debug\MainPage.g.i.cs

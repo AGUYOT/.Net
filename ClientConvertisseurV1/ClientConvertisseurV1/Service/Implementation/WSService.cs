@@ -10,29 +10,29 @@ namespace ClientConvertisseurV1.Service.Implementation
 {
     public class WSService : IWSService
     {
-        private static WSService instance;
-        private static readonly HttpClient client = new HttpClient();
+        private static WSService _instance;
+        private static readonly HttpClient _client = new HttpClient();
         
         public WSService()
         {
-            client.BaseAddress = new Uri("http://localhost:5000/api/");
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
+            _client.BaseAddress = new Uri("http://localhost:5000/api/");
+            _client.DefaultRequestHeaders.Accept.Clear();
+            _client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public static WSService GetInstance()
         {
-            if(instance == null)
+            if(_instance == null)
             {
-                instance = new WSService();
+                _instance = new WSService();
             }
-            return instance;
+            return _instance;
         }
 
         public async Task<IEnumerable<Devise>> GetDevisesAsync()
         {
-            HttpResponseMessage response = await client.GetAsync("devise");
+            HttpResponseMessage response = await _client.GetAsync("devise");
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
 
