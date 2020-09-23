@@ -38,20 +38,21 @@ namespace ClientConvertisseurV1
         {
             if(!String.IsNullOrEmpty(this.amountBox.Text))
             {
-                int value;
+                double result;
                 ConvertService service = new ConvertService();
+                Devise devise = (Devise)this.deviseBox.SelectedItem;
 
-                if(!int.TryParse(this.amountBox.Text, out value))
+                if (!service.TryConvert(this.amountBox.Text, devise.Taux, out result))
                 {
+
                     this.errorText.Text = "La valeur que vous avez tapé est invalide !";
                     this.errorText.Visibility = Visibility.Visible;
+                    this.convertedBox.Text = "";
                 } else
                 {
                     this.InitializeError();
-                }
-                Devise devise = (Devise)this.deviseBox.SelectedItem;
-                double result = service.Convert(value, devise.Taux);
-                this.convertedBox.Text = result.ToString();
+                    this.convertedBox.Text = result.ToString();
+                }         
             }
             else
             {
