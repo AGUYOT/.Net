@@ -35,6 +35,11 @@ namespace WSConvertisseur.Controllers
                 },
             };
         }
+
+        /// <summary>
+        /// Get every currency.
+        /// </summary>
+        /// <returns>Http response</returns>
         // GET: api/<DeviseController>
         [HttpGet]
         public IActionResult GetAll()
@@ -42,6 +47,13 @@ namespace WSConvertisseur.Controllers
             return Ok(this.devises);
         }
 
+        /// <summary>
+        /// Get a single currency.
+        /// </summary>
+        /// <returns>Http response</returns>
+        /// <param name="id">The id of the currency</param>
+        /// <response code="200">When the currency id is found</response>
+        /// <response code="404">When the currency id is not found</response> 
         // GET api/<DeviseController>/5
         [HttpGet("{id}", Name = "GetDevise")]
         public IActionResult GetById(int id)
@@ -54,6 +66,12 @@ namespace WSConvertisseur.Controllers
             return Ok(devise);
         }
 
+        /// <summary>
+        /// Create one currency
+        /// </summary>
+        /// <returns>Http response</returns>
+        /// <param name="devise">the currency to create</param>
+        /// <response code="201">When the currency has been created</response>
         // POST api/<DeviseController>
         [HttpPost]
         public IActionResult Post([FromBody] Devise devise)
@@ -66,6 +84,15 @@ namespace WSConvertisseur.Controllers
             return CreatedAtRoute("GetDevise", new { Id = devise.Id }, devise);
         }
 
+        /// <summary>
+        /// Modify one currency
+        /// </summary>
+        /// <returns>Http response</returns>
+        /// <param name="id">The id of the currency</param>
+        /// <param name="devise">The currency modified</param>
+        /// <response code="200">When the currency id is found</response>
+        /// <response code="404">When the currency id is not found</response> 
+        /// <response code="400">When the currency passed isn't well formed</response> 
         // PUT api/<DeviseController>/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] Devise devise)
@@ -87,6 +114,13 @@ namespace WSConvertisseur.Controllers
             return NoContent();
         }
 
+        /// <summary>
+        /// Remove one currency
+        /// </summary>
+        /// <returns>Http response</returns>
+        /// <param name="id">The id of the currency</param>
+        /// <response code="200">When the currency id is found and removed</response>
+        /// <response code="404">When the currency id is not found</response> 
         // DELETE api/<DeviseController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)

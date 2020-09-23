@@ -10,8 +10,6 @@ C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\bin\Debug\netco
 C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\WSConvertisseur.csprojAssemblyReference.cache
 C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\WSConvertisseur.AssemblyInfoInputs.cache
 C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\WSConvertisseur.AssemblyInfo.cs
-C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\WSConvertisseur.csproj.CoreCompileInputs.cache
-C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\WSConvertisseur.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\WSConvertisseur.RazorTargetAssemblyInfo.cache
 C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\staticwebassets\WSConvertisseur.StaticWebAssets.Manifest.cache
 C:\Users\Etudiant\Documents\.Net\WSConvertisseur\WSConvertisseur\obj\Debug\netcoreapp3.1\staticwebassets\WSConvertisseur.StaticWebAssets.xml
