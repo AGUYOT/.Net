@@ -1,0 +1,1 @@
+C:\Users\Etudiant\Documents\.Net\ClientConvertisseurV1\ClientConvertisseurV1\ClientConvertisseurV1.csproj;x86

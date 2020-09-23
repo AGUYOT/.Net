@@ -42,6 +42,7 @@ namespace WSConvertisseur.Controllers
         /// <returns>Http response</returns>
         // GET: api/<DeviseController>
         [HttpGet]
+        [ProducesResponseType(typeof(IEnumerable<Devise>), 200)]
         public IActionResult GetAll()
         {
             return Ok(this.devises);
@@ -56,6 +57,8 @@ namespace WSConvertisseur.Controllers
         /// <response code="404">When the currency id is not found</response> 
         // GET api/<DeviseController>/5
         [HttpGet("{id}", Name = "GetDevise")]
+        [ProducesResponseType(typeof(Devise), 200)]
+        [ProducesResponseType(404)]
         public IActionResult GetById(int id)
         {
             Devise devise = this.devises.FirstOrDefault(devise => devise.Id == id);
@@ -74,6 +77,8 @@ namespace WSConvertisseur.Controllers
         /// <response code="201">When the currency has been created</response>
         // POST api/<DeviseController>
         [HttpPost]
+        [ProducesResponseType(typeof(Devise), 201)]
+        [ProducesResponseType(400)]
         public IActionResult Post([FromBody] Devise devise)
         {
             if(!ModelState.IsValid)
@@ -95,6 +100,9 @@ namespace WSConvertisseur.Controllers
         /// <response code="400">When the currency passed isn't well formed</response> 
         // PUT api/<DeviseController>/5
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(Devise), 201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(404)]
         public IActionResult Put(int id, [FromBody] Devise devise)
         {
             if (!ModelState.IsValid)
@@ -123,6 +131,8 @@ namespace WSConvertisseur.Controllers
         /// <response code="404">When the currency id is not found</response> 
         // DELETE api/<DeviseController>/5
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(Devise), 201)]
+        [ProducesResponseType(404)]
         public IActionResult Delete(int id)
         {
             Devise toDelete = this.devises.FirstOrDefault(devise => devise.Id == id);
