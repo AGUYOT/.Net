@@ -11,7 +11,7 @@
 
     <RelativePanel>
         <TextBlock x:ConnectionId='2' x:Name="convertText" FontSize="70px" Margin="15">
-            Convertisseur Euros->Devises
+            Convertisseur Devises->Euros
         </TextBlock>
         <TextBlock x:ConnectionId='3' x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"

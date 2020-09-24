@@ -100,7 +100,7 @@ namespace WSConvertisseur.Controllers
         /// <response code="400">When the currency passed isn't well formed</response> 
         // PUT api/<DeviseController>/5
         [HttpPut("{id}")]
-        [ProducesResponseType(typeof(Devise), 201)]
+        [ProducesResponseType(204)]
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         public IActionResult Put(int id, [FromBody] Devise devise)
