@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace TP3WSRest.Models.EntityFramework
 {
+    [Table("T_E_COMPTE_CPT")]
     public partial class Compte
     {
         public Compte()
@@ -31,11 +32,12 @@ namespace TP3WSRest.Models.EntityFramework
         public string Prenom { get; set; }
 
         [Column("CPT_TELPORTABLE", TypeName = "char(10)")]
+        [RegularExpression(@"^0[0-9]{9}$", ErrorMessage = "")]
         public string TelPortable { get; set; }
         
         [Column("CPT_MEL")]
-        [StringLength(100)]
         [Required]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "La longueur d’un email doit être comprise entre 6 et 100 caractères.")]
         public string Mel { get; set; }
 
         [Column("CPT_PWD")]

@@ -24,14 +24,13 @@ namespace TP3WSRest.Models.EntityFramework
         public virtual DbSet<Favori> Favoris { get; set; }
         public virtual DbSet<Compte> Comptes { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseLoggerFactory(MyLoggerFactory).EnableSensitiveDataLogging();
-                optionsBuilder.UseNpgsql("Server=localhost;port=5432;Database=WSFilms; uid=postgres; password=postgres;");
-            }
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    if (!optionsBuilder.IsConfigured)
+        //    {
+        //        optionsBuilder.UseLoggerFactory(MyLoggerFactory).EnableSensitiveDataLogging();
+        //    }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,19 +38,19 @@ namespace TP3WSRest.Models.EntityFramework
             modelBuilder.Entity<Favori>(entity =>
             {
                 entity.HasKey(f => new { f.CompteId, f.FilmId })
-                    .HasName("pk_avis");
+                    .HasName("PK_FAV");
 
                 entity.HasOne(f => f.FilmFavori)
                     .WithMany(f => f.FavorisFilm)
                     .HasForeignKey(f => f.FilmId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_FAVORI_FILM");
+                    .HasConstraintName("FK_FAV_FLM");
 
                 entity.HasOne(f => f.CompteFavori)
                     .WithMany(c => c.FavorisCompte)
                     .HasForeignKey(f => f.CompteId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_FAVORI_COMPTE");
+                    .HasConstraintName("FK_FAV_CPT");
             });
 
             modelBuilder.Entity<Compte>(entity =>
@@ -63,7 +62,7 @@ namespace TP3WSRest.Models.EntityFramework
                     .HasDefaultValue("France");
 
                 entity.Property(c => c.DateCreation)
-                    .HasDefaultValue(DateTime.Now);
+                    .HasDefaultValueSql("NOW()");
             });
 
         }

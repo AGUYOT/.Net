@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP3WSRest.Models.EntityFramework
 {
+    [Table("T_J_FAVORI_FAV")]
     public partial class Favori
     {
         [Key]

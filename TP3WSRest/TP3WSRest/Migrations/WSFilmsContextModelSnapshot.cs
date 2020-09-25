@@ -37,7 +37,7 @@ namespace TP3WSRest.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("CPT_DATECREATION")
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2020, 9, 25, 11, 31, 3, 169, DateTimeKind.Local).AddTicks(9066));
+                        .HasDefaultValueSql("NOW()");
 
                     b.Property<float?>("Latitude")
                         .HasColumnName("CPT_LATITUDE")
@@ -99,7 +99,7 @@ namespace TP3WSRest.Migrations
                     b.HasIndex("Mel")
                         .IsUnique();
 
-                    b.ToTable("Comptes");
+                    b.ToTable("T_E_COMPTE_CPT");
                 });
 
             modelBuilder.Entity("TP3WSRest.Models.EntityFramework.Favori", b =>
@@ -113,11 +113,11 @@ namespace TP3WSRest.Migrations
                         .HasColumnType("integer");
 
                     b.HasKey("CompteId", "FilmId")
-                        .HasName("pk_avis");
+                        .HasName("PK_FAV");
 
                     b.HasIndex("FilmId");
 
-                    b.ToTable("Favoris");
+                    b.ToTable("T_J_FAVORI_FAV");
                 });
 
             modelBuilder.Entity("TP3WSRest.Models.EntityFramework.Film", b =>
@@ -160,7 +160,7 @@ namespace TP3WSRest.Migrations
 
                     b.HasKey("FilmId");
 
-                    b.ToTable("Film");
+                    b.ToTable("T_E_FILM_FLM");
                 });
 
             modelBuilder.Entity("TP3WSRest.Models.EntityFramework.Favori", b =>
@@ -168,13 +168,13 @@ namespace TP3WSRest.Migrations
                     b.HasOne("TP3WSRest.Models.EntityFramework.Compte", "CompteFavori")
                         .WithMany("FavorisCompte")
                         .HasForeignKey("CompteId")
-                        .HasConstraintName("FK_FAVORI_COMPTE")
+                        .HasConstraintName("FK_FAV_CPT")
                         .IsRequired();
 
                     b.HasOne("TP3WSRest.Models.EntityFramework.Film", "FilmFavori")
                         .WithMany("FavorisFilm")
                         .HasForeignKey("FilmId")
-                        .HasConstraintName("FK_FAVORI_FILM")
+                        .HasConstraintName("FK_FAV_FLM")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

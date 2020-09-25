@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP3WSRest.Models.EntityFramework
 {
-    [Table("Film")]
+    [Table("T_E_FILM_FLM")]
     public partial class Film
     {
         public Film()
