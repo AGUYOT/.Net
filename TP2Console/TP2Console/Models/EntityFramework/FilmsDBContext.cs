@@ -3,11 +3,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using System.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace TP2Console.Models.EntityFramework
 {
     public partial class FilmsDBContext : DbContext
     {
+        public static readonly ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => { builder.AddConsole(); });
+
         public FilmsDBContext()
         {
         }
@@ -26,7 +29,7 @@ namespace TP2Console.Models.EntityFramework
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseLoggerFactory(MyLoggerFactory).EnableSensitiveDataLogging();
                 optionsBuilder.UseNpgsql("Server=localhost;port=5432;Database=FilmsDB; uid=postgres; password=postgres;");
             }
         }

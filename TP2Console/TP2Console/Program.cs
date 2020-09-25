@@ -11,7 +11,20 @@ namespace TP2Console
     {
         static void Main(string[] args)
         {
-            Exo2Q8();
+            //Exo2Q1();
+            //Exo2Q1Bis();
+            //Exo2Q2();
+            //Exo2Q3();
+            //Exo2Q4();
+            //Exo2Q5();
+            //Exo2Q6();
+            //Exo2Q7();
+            //Exo2Q8();
+            //Exo2Q9();
+            //Exo3_AddUser();
+            //Exo3_EditFilm();
+            //Exo3_CreateAvis();
+            Exo3_CreateFilms();
         }
         public static void Exo2Q1()
         {
@@ -60,7 +73,7 @@ namespace TP2Console
             var ctx = new FilmsDBContext();
             foreach (var film in ctx.Film.Where(f => f.Categorie == ctx.Categorie.Where(c => c.Nom == "Action").Select(c => c.Id).FirstOrDefault()))
             {
-                Console.WriteLine("Id: "+film.Id+" Nom: "+film.Nom);
+                Console.WriteLine("Id: " + film.Id + " Nom: " + film.Nom);
             }
             Console.ReadKey();
         }
@@ -98,7 +111,7 @@ namespace TP2Console
                 .Where(a => a.FilmNavigation.Nom.Equals("pulp fiction", StringComparison.InvariantCultureIgnoreCase));
             var somme = listeAvis.Sum(a => a.Note);
             var count = listeAvis.Count();
-            Console.WriteLine("Moyenne de la note du film Pulp Fiction : "+somme/count);
+            Console.WriteLine("Moyenne de la note du film Pulp Fiction : " + somme / count);
             Console.ReadKey();
         }
 
@@ -107,8 +120,76 @@ namespace TP2Console
             var ctx = new FilmsDBContext();
             var utilisateur = ctx.Utilisateur.Select(u => u)
                 .Include(u => u.Avis)
-                .Where(u => u.Id == ctx.Avis.Max(a => a.Note));
-            Console.WriteLine("Utilisateur ayant attribué la meilleur note : ");
+                .Where(u => u.Id == ctx.Avis.Where(a => a.Note == ctx.Avis.Max(a => a.Note)).Select(a => a.Utilisateur).FirstOrDefault())
+                .FirstOrDefault();
+            Console.WriteLine("Utilisateur ayant attribué la meilleur note : " + utilisateur.ToString());
+            Console.ReadKey();
+        }
+
+        public static void Exo3_AddUser()
+        {
+            var ctx = new FilmsDBContext();
+            Utilisateur user = new Utilisateur
+            {
+                Login = "aguyot",
+                Pwd = "test123",
+                Email = "monMail@mail.fr"
+            };
+            ctx.Utilisateur.Add(user);
+            ctx.SaveChanges();
+            Console.WriteLine("Utilisateur Créé : " + user.ToString());
+            Console.ReadKey();
+        }
+
+        public static void Exo3_EditFilm()
+        {
+            var ctx = new FilmsDBContext();
+            var film = ctx.Film.FirstOrDefault(f => f.Nom.Equals("L'armee des douze singes"));
+            film.Description = "Film de science-fiction d'un futur catastrophique. Voyage dans le temps au programme";
+            film.Categorie = ctx.Categorie.Where(c => c.Nom.Equals("Drame")).Select(c => c.Id).FirstOrDefault();
+            int nbChanges = ctx.SaveChanges();
+            Console.WriteLine("Nombre de changements effectués : " + nbChanges);
+            Console.ReadKey();
+        }
+
+        public static void Exo3_CreateAvis()
+        {
+            var ctx = new FilmsDBContext();
+            Avis avis = new Avis
+            {
+                Note = new Decimal(0.954231),
+                Film = 37,
+                Utilisateur = 1,
+                Avis1 = "Film génial !"
+            };
+            ctx.Avis.Add(avis);
+            int nbChanges = ctx.SaveChanges();
+            Console.WriteLine("Avis créé : " + avis.ToString());
+            Console.ReadKey();
+        }
+
+        public static void Exo3_CreateFilms()
+        {
+            var ctx = new FilmsDBContext();
+            Film film = new Film
+            {
+            };
+            ctx.Film.AddRange(
+                new Film
+                { 
+                    Nom = "Avatar",
+                    Categorie = 5,
+                    Description = "Des bonhommes bleus"
+                },
+                new Film
+                {
+                    Nom = "Avengers",
+                    Categorie = 5,
+                    Description = "Explosions partout"
+                }
+            );
+            int nbChanges = ctx.SaveChanges();
+            Console.WriteLine("Nombre de changes : " + nbChanges);
             Console.ReadKey();
         }
     }
