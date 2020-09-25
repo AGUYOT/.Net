@@ -69,7 +69,7 @@ namespace TP3WSRest.Models.EntityFramework
         [Column("CPT_LONGITUDE")]
         public Nullable<float> Longitude { get; set; }
 
-        [Column("CPT_DATECREATION")]
+        [Column("CPT_DATECREATION", TypeName = "date")]
         [Required]
         public DateTime DateCreation { get; set; }
 

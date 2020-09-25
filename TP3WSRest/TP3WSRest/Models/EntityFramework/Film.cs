@@ -28,7 +28,7 @@ namespace TP3WSRest.Models.EntityFramework
         [StringLength(500)]
         public string Synopsis { get; set; }
 
-        [Column("FLM_DATEPARUTION")]
+        [Column("FLM_DATEPARUTION", TypeName = "date")]
         [Required]
         public DateTime DateParution { get; set; }
 
