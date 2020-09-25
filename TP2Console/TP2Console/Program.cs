@@ -23,6 +23,7 @@ namespace TP2Console
             //Exo2Q9();
             //Exo3_AddUser();
             //Exo3_EditFilm();
+            //Exo3_DeleteFilm();
             //Exo3_CreateAvis();
             Exo3_CreateFilms();
         }
@@ -147,6 +148,16 @@ namespace TP2Console
             var film = ctx.Film.FirstOrDefault(f => f.Nom.Equals("L'armee des douze singes"));
             film.Description = "Film de science-fiction d'un futur catastrophique. Voyage dans le temps au programme";
             film.Categorie = ctx.Categorie.Where(c => c.Nom.Equals("Drame")).Select(c => c.Id).FirstOrDefault();
+            int nbChanges = ctx.SaveChanges();
+            Console.WriteLine("Nombre de changements effectués : " + nbChanges);
+            Console.ReadKey();
+        }
+
+        public static void Exo3_DeleteFilm()
+        {
+            var ctx = new FilmsDBContext();
+            ctx.Avis.RemoveRange(ctx.Avis.Where(a => a.FilmNavigation.Nom.Equals("L'armee des douze singes")));
+            ctx.Film.Remove(ctx.Film.FirstOrDefault(f => f.Nom.Equals("L'armee des douze singes")));
             int nbChanges = ctx.SaveChanges();
             Console.WriteLine("Nombre de changements effectués : " + nbChanges);
             Console.ReadKey();
