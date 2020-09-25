@@ -35,3 +35,15 @@ C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\Mic
 C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\Npgsql.dll
 C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\obj\Debug\netcoreapp3.1\TP3WSRest.csproj.CoreCompileInputs.cache
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\obj\Debug\netcoreapp3.1\TP3WSRest.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\TP3WSRest.deps.json
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\TP3WSRest.runtimeconfig.json
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\TP3WSRest.runtimeconfig.dev.json
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\TP3WSRest.dll
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\TP3WSRest.pdb
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\obj\Debug\netcoreapp3.1\TP3WSRest.dll
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\obj\Debug\netcoreapp3.1\TP3WSRest.pdb
+C:\Users\Etudiant\Documents\.Net\TP3WSRest\TP3WSRest\obj\Debug\netcoreapp3.1\TP3WSRest.genruntimeconfig.cache

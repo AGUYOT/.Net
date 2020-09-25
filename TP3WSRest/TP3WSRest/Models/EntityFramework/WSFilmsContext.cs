@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace TP3WSRest.Models.EntityFramework
 {
-    public partial class FilmsDBContext : DbContext
+    public partial class WSFilmsContext : DbContext
     {
         public static readonly ILoggerFactory MyLoggerFactory = LoggerFactory.Create(builder => { builder.AddConsole(); });
 
-        public FilmsDBContext()
+        public WSFilmsContext()
         {
         }
 
-        public FilmsDBContext(DbContextOptions<FilmsDBContext> options)
+        public WSFilmsContext(DbContextOptions<WSFilmsContext> options)
             : base(options)
         {
         }
@@ -29,7 +29,7 @@ namespace TP3WSRest.Models.EntityFramework
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseLoggerFactory(MyLoggerFactory).EnableSensitiveDataLogging();
-                optionsBuilder.UseNpgsql("Server=localhost;port=5432;Database=FilmsDB; uid=postgres; password=postgres;");
+                optionsBuilder.UseNpgsql("Server=localhost;port=5432;Database=WSFilms; uid=postgres; password=postgres;");
             }
         }
 
@@ -54,15 +54,16 @@ namespace TP3WSRest.Models.EntityFramework
                     .HasConstraintName("FK_FAVORI_COMPTE");
             });
 
-            modelBuilder.Entity<Film>(entity =>
-            {
-                
-            });
-
             modelBuilder.Entity<Compte>(entity =>
             {
                 entity.HasIndex(c => c.Mel)
                     .IsUnique();
+
+                entity.Property(c => c.Pays)
+                    .HasDefaultValue("France");
+
+                entity.Property(c => c.DateCreation)
+                    .HasDefaultValue(DateTime.Now);
             });
 
         }

@@ -1,0 +1,10 @@
+﻿
+
+Création de migration :
+dotnet-ef migrations add create-db --project TP3WSRest
+
+Suppression de migration :
+dotnet-ef migrations remove –-project TP3WSRest
+
+Appliquer toutes les migraitons :
+dotnet-ef database update –-project TP3WSRest

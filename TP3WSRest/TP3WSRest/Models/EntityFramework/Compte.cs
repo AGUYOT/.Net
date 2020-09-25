@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -15,14 +16,17 @@ namespace TP3WSRest.Models.EntityFramework
         }
 
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("CPT_ID")]
         public int CompteId { get; set; }
 
         [Column("CPT_NOM")]
+        [StringLength(50)]
         [Required]
         public string Nom { get; set; }
 
         [Column("CPT_PRENOM")]
+        [StringLength(50)]
         [Required]
         public string Prenom { get; set; }
 
@@ -30,13 +34,16 @@ namespace TP3WSRest.Models.EntityFramework
         public string TelPortable { get; set; }
         
         [Column("CPT_MEL")]
+        [StringLength(100)]
         [Required]
         public string Mel { get; set; }
 
         [Column("CPT_PWD")]
+        [StringLength(64)]
         public string Pwd { get; set; }
 
         [Column("CPT_RUE")]
+        [StringLength(200)]
         [Required]
         public string Rue { get; set; }
 
@@ -45,10 +52,12 @@ namespace TP3WSRest.Models.EntityFramework
         public string CodePostal { get; set; }
 
         [Column("CPT_VILLE")]
+        [StringLength(50)]
         [Required]
         public string Ville { get; set; }
 
         [Column("CPT_PAYS")]
+        [StringLength(50)]
         [Required]
         public string Pays { get; set; }
 
