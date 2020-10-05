@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-10-05T08:27:38.036</Modified>
+      <Modified>2020-10-05T09:50:29.555</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\ClientAllocine.exe">
       <PackagePath>entrypoint\ClientAllocine.exe</PackagePath>
-      <Modified>2020-10-05T08:27:37.307</Modified>
+      <Modified>2020-10-05T09:50:28.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\.nuget\packages\commonservicelocator\2.0.2\lib\netstandard2.0\CommonServiceLocator.dll">
       <PackagePath>CommonServiceLocator.dll</PackagePath>
@@ -114,23 +114,23 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\ClientAllocine.xr.xml">
       <PackagePath>ClientAllocine.xr.xml</PackagePath>
-      <Modified>2020-10-05T08:27:37.060</Modified>
+      <Modified>2020-10-05T09:24:10.850</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-10-05T08:27:37.070</Modified>
+      <Modified>2020-10-05T09:50:28.784</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\View\ComptePage.xbf">
       <PackagePath>View\ComptePage.xbf</PackagePath>
-      <Modified>2020-10-05T08:27:37.071</Modified>
+      <Modified>2020-10-05T09:50:28.781</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\View\HomePage.xbf">
       <PackagePath>View\HomePage.xbf</PackagePath>
-      <Modified>2020-10-05T08:27:37.071</Modified>
+      <Modified>2020-10-05T09:50:28.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\View\RootPage.xbf">
       <PackagePath>View\RootPage.xbf</PackagePath>
-      <Modified>2020-10-05T08:27:37.072</Modified>
+      <Modified>2020-10-05T09:50:28.795</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -142,7 +142,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\Core\ClientAllocine.exe">
       <PackagePath>ClientAllocine.exe</PackagePath>
-      <Modified>2020-10-05T08:27:38.018</Modified>
+      <Modified>2020-10-05T09:50:29.548</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

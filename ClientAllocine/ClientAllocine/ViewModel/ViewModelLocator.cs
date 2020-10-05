@@ -1,5 +1,6 @@
 ﻿using ClientAllocine.Model;
 using ClientAllocine.Services;
+using ClientAllocine.Services.Implementation;
 using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
 using System;
@@ -16,11 +17,11 @@ namespace ClientAllocine.ViewModel
         {
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
             SimpleIoc.Default.Register<CompteViewModel>();
-            SimpleIoc.Default.Register<IWSService<Compte>>();
+            SimpleIoc.Default.Register<WSCompteService>();
         }
         /// <summary>
         /// Gets the Main property.
         /// </summary>
-        public CompteViewModel Main => ServiceLocator.Current.GetInstance<CompteViewModel>();
+        public CompteViewModel Compte => ServiceLocator.Current.GetInstance<CompteViewModel>();
     }
 }

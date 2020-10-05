@@ -67,5 +67,25 @@ namespace ClientAllocine.Services.Implementation
             Compte compte = JsonConvert.DeserializeObject<Compte>(responseBody);
             return compte;
         }
+
+        public async Task UpdateCompteAsync(Compte compte)
+        {
+            HttpResponseMessage response = null;
+            var content = new StringContent(JsonConvert.SerializeObject(compte), Encoding.UTF8, "application/json");
+            try
+            {
+                response = await _client.PutAsync($"compte/{compte.CompteId}", content);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (TimeoutException e)
+            {
+                throw e;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return;
+        }
     }
 }

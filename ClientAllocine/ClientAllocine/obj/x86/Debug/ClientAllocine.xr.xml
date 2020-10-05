@@ -1,18 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Compte" />
+    <RootPropertyPathName Name="BtnAddCompteCommand" />
+    <RootPropertyPathName Name="BtnClearCompteCommand" />
+    <RootPropertyPathName Name="BtnModifyCompteCommand" />
     <RootPropertyPathName Name="CompteSearch" />
-    <RootPropertyPathName Name="Mail" />
+    <RootPropertyPathName Name="Pays" />
+    <RootPropertyPathName Name="Ville" />
+    <RootPropertyPathName Name="CodePostal" />
+    <RootPropertyPathName Name="Rue" />
+    <RootPropertyPathName Name="Mel" />
+    <RootPropertyPathName Name="TelPortable" />
+    <RootPropertyPathName Name="Nom" />
+    <RootPropertyPathName Name="BtnSearchCommand" />
+    <RootPropertyPathName Name="EmailSearch" />
     <RootPropertyPathName Name="ErrorLabelVisibility" />
     <RootPropertyPathName Name="ErrorLabelText" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
-    <RootType FullName="Windows.UI.Xaml.Application" />
+    <RootType FullName="Windows.UI.Xaml.Application">
+      <RootProperty Name="RequestedTheme" />
+      <RootProperty Name="Resources" />
+    </RootType>
+    <RootType FullName="ClientAllocine.ViewModel.ViewModelLocator" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Source" />
+      <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="Children" />
       <RootMethod Name="GetBelow" />
@@ -25,6 +47,8 @@
       <RootMethod Name="SetAlignVerticalCenterWith" />
       <RootMethod Name="GetRightOf" />
       <RootMethod Name="SetRightOf" />
+      <RootMethod Name="GetAlignBottomWithPanel" />
+      <RootMethod Name="SetAlignBottomWithPanel" />
       <RootMethod Name="GetAlignVerticalCenterWithPanel" />
       <RootMethod Name="SetAlignVerticalCenterWithPanel" />
       <RootMethod Name="GetAbove" />
@@ -46,18 +70,26 @@
       <RootProperty Name="Height" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Text" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Command" />
       <RootProperty Name="Content" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Background" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.Binding">
-      <RootProperty Name="Mode" />
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
+      <RootProperty Name="Name" />
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="ClientAllocine.View.ComptePage" />
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
