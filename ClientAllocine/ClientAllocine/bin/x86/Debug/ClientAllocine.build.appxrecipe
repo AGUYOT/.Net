@@ -91,6 +91,9 @@
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\View\CreationPage.xbf">
+      <PackagePath>View\CreationPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\View\ComptePage.xbf">
       <PackagePath>View\ComptePage.xbf</PackagePath>
     </AppxPackagedFile>

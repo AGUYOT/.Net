@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ClientAllocine.View.ComptePage"
+    x:Class="ClientAllocine.View.CreationPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ClientAllocine.View"
@@ -7,11 +7,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    DataContext="{Binding Compte, Source={StaticResource Locator}}">
+    DataContext="{Binding Creation, Source={StaticResource Locator}}">
 
     <RelativePanel>
         <TextBlock x:Name="convertText" FontSize="50px" Margin="5">
-            Recherche de Compte
+            Création de Compte
         </TextBlock>
         <TextBlock x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -21,22 +21,7 @@
                    Visibility="{Binding ErrorLabelVisibility, Mode=OneWay}"
                    Text="{Binding ErrorLabelText, Mode=OneWay}">
         </TextBlock>
-        <TextBlock x:Name="searchText" RelativePanel.LeftOf="searchBox" RelativePanel.AlignVerticalCenterWith="searchBox" FontSize="30px" >
-        Mail :
-        </TextBlock>
-        <TextBox x:Name="searchBox" RelativePanel.Below="errorText"
-                RelativePanel.AlignHorizontalCenterWithPanel="True"
-                Width="500"
-                Height="50"
-                FontSize="25px"
-                Text="{Binding EmailSearch, Mode=TwoWay}">
-        </TextBox>
-        <Button RelativePanel.RightOf="mailBox" Width="250" RelativePanel.AlignVerticalCenterWith="searchBox"
-                Height="50" FontSize="30"
-                Command="{Binding BtnSearchCommand}">
-            Rechercher
-        </Button>
-        <TextBlock x:Name="nomText" RelativePanel.Below="searchBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        <TextBlock x:Name="nomText" RelativePanel.Below="errorText" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Nom
         </TextBlock>
         <TextBox x:Name="nomBox" RelativePanel.Below="nomText"
@@ -66,7 +51,17 @@
                 FontSize="30px"
                 Text="{Binding CompteStored.TelPortable, Mode=TwoWay}">
         </TextBox>
-        <TextBlock x:Name="mailText" RelativePanel.Below="portableBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        <TextBlock x:Name="passwordText" RelativePanel.Below="portableBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        Mot de passe
+        </TextBlock>
+        <PasswordBox x:Name="passwordBox" RelativePanel.Below="passwordText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="250"
+                Height="50"
+                FontSize="30px"
+                Password="{Binding CompteStored.Pwd, Mode=TwoWay}">
+        </PasswordBox>
+        <TextBlock x:Name="mailText" RelativePanel.Below="passwordBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Email
         </TextBlock>
         <TextBox x:Name="mailBox" RelativePanel.Below="mailText"
@@ -121,10 +116,6 @@ BtnModifyCompteCommand}"></AppBarButton>
  Icon="ClearSelection"
 Label="Clear" Command="{Binding
 BtnClearCompteCommand}"></AppBarButton>
-                <AppBarButton Name="Add"
- Icon="Add"
-Label="Add" Command="{Binding
-BtnAddCompteCommand}"></AppBarButton>
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </RelativePanel>

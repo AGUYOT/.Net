@@ -41,7 +41,7 @@ namespace TP3WSRest.Models.EntityFramework
         public string Mel { get; set; }
 
         [Column("CPT_PWD")]
-        [StringLength(64)]
+        [StringLength(256)]
         public string Pwd { get; set; }
 
         [Column("CPT_RUE")]

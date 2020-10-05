@@ -122,10 +122,18 @@
     <Compile Include="Model\Compte.cs" />
     <Compile Include="Model\Favori.cs" />
     <Compile Include="Model\Film.cs" />
+    <Compile Include="Model\RootObject.cs" />
+    <Compile Include="Services\Implementation\WSBingMapService.cs" />
     <Compile Include="Services\Implementation\WSCompteService.cs" />
+    <Compile Include="Services\IWSBingMapService.cs" />
     <Compile Include="Services\IWSService.cs" />
-    <Compile Include="ViewModel\CompteViewModel.cs" />
+    <Compile Include="ViewModel\AbstractCompteViewModel.cs" />
+    <Compile Include="ViewModel\CompteModel\CreationViewModel.cs" />
+    <Compile Include="ViewModel\CompteModel\CompteViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\CreationPage.xaml.cs">
+      <DependentUpon>CreationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ComptePage.xaml.cs">
       <DependentUpon>ComptePage.xaml</DependentUpon>
     </Compile>
@@ -157,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="View\CreationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\ComptePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

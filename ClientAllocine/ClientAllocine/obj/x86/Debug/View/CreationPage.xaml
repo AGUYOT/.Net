@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="ClientAllocine.View.ComptePage"
+    x:Class="ClientAllocine.View.CreationPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ClientAllocine.View"
@@ -7,13 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    DataContext="{Binding Compte, Source={StaticResource Locator}}">
+    DataContext="{Binding Creation, Source={StaticResource Locator}}">
 
     <RelativePanel>
-        <TextBlock x:Name="convertText" FontSize="50px" Margin="5">
-            Recherche de Compte
+        <TextBlock x:ConnectionId='2' x:Name="convertText" FontSize="50px" Margin="5">
+            Création de Compte
         </TextBlock>
-        <TextBlock x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
+        <TextBlock x:ConnectionId='3' x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
                    RelativePanel.AlignHorizontalCenterWithPanel="True"
                    Margin="10"
                    FontStyle="Normal"
@@ -21,72 +21,67 @@
                    Visibility="{Binding ErrorLabelVisibility, Mode=OneWay}"
                    Text="{Binding ErrorLabelText, Mode=OneWay}">
         </TextBlock>
-        <TextBlock x:Name="searchText" RelativePanel.LeftOf="searchBox" RelativePanel.AlignVerticalCenterWith="searchBox" FontSize="30px" >
-        Mail :
-        </TextBlock>
-        <TextBox x:Name="searchBox" RelativePanel.Below="errorText"
-                RelativePanel.AlignHorizontalCenterWithPanel="True"
-                Width="500"
-                Height="50"
-                FontSize="25px"
-                Text="{Binding EmailSearch, Mode=TwoWay}">
-        </TextBox>
-        <Button RelativePanel.RightOf="mailBox" Width="250" RelativePanel.AlignVerticalCenterWith="searchBox"
-                Height="50" FontSize="30"
-                Command="{Binding BtnSearchCommand}">
-            Rechercher
-        </Button>
-        <TextBlock x:Name="nomText" RelativePanel.Below="searchBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        <TextBlock x:ConnectionId='4' x:Name="nomText" RelativePanel.Below="errorText" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Nom
         </TextBlock>
-        <TextBox x:Name="nomBox" RelativePanel.Below="nomText"
+        <TextBox x:ConnectionId='5' x:Name="nomBox" RelativePanel.Below="nomText"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="250"
                 Height="50"
                 FontSize="30px"
                 Text="{Binding CompteStored.Nom, Mode=TwoWay}">
         </TextBox>
-        <TextBlock x:Name="prenomText" RelativePanel.Below="nomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        <TextBlock x:ConnectionId='6' x:Name="prenomText" RelativePanel.Below="nomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Prénom
         </TextBlock>
-        <TextBox x:Name="prenomBox" RelativePanel.Below="prenomText"
+        <TextBox x:ConnectionId='7' x:Name="prenomBox" RelativePanel.Below="prenomText"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="250"
                 Height="50"
                 FontSize="30px"
                 Text="{Binding CompteStored.Prenom, Mode=TwoWay}">
         </TextBox>
-        <TextBlock x:Name="portableText" RelativePanel.Below="prenomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        <TextBlock x:ConnectionId='8' x:Name="portableText" RelativePanel.Below="prenomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Portable
         </TextBlock>
-        <TextBox x:Name="portableBox" RelativePanel.Below="portableText"
+        <TextBox x:ConnectionId='9' x:Name="portableBox" RelativePanel.Below="portableText"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="250"
                 Height="50"
                 FontSize="30px"
                 Text="{Binding CompteStored.TelPortable, Mode=TwoWay}">
         </TextBox>
-        <TextBlock x:Name="mailText" RelativePanel.Below="portableBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        <TextBlock x:ConnectionId='10' x:Name="passwordText" RelativePanel.Below="portableBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        Mot de passe
+        </TextBlock>
+        <PasswordBox x:ConnectionId='11' x:Name="passwordBox" RelativePanel.Below="passwordText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="250"
+                Height="50"
+                FontSize="30px"
+                Password="{Binding CompteStored.Pwd, Mode=TwoWay}">
+        </PasswordBox>
+        <TextBlock x:ConnectionId='12' x:Name="mailText" RelativePanel.Below="passwordBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Email
         </TextBlock>
-        <TextBox x:Name="mailBox" RelativePanel.Below="mailText"
+        <TextBox x:ConnectionId='13' x:Name="mailBox" RelativePanel.Below="mailText"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="500"
                 Height="50"
                 FontSize="30px"
                 Text="{Binding CompteStored.Mel, Mode=TwoWay}">
         </TextBox>
-        <TextBlock x:Name="adresseText" RelativePanel.Below="mailBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        <TextBlock x:ConnectionId='14' x:Name="adresseText" RelativePanel.Below="mailBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Adresse (Rue, CP, Ville, Pays)
         </TextBlock>
-        <TextBox x:Name="rueBox" RelativePanel.Below="adresseText"
+        <TextBox x:ConnectionId='15' x:Name="rueBox" RelativePanel.Below="adresseText"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="500"
                 Height="50"
                 FontSize="30px"
                 Text="{Binding CompteStored.Rue, Mode=TwoWay}">
         </TextBox>
-        <TextBox x:Name="cpBox" RelativePanel.Below="rueBox"
+        <TextBox x:ConnectionId='16' x:Name="cpBox" RelativePanel.Below="rueBox"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="100"
                 Height="50"
@@ -94,7 +89,7 @@
                 Margin="5"
                 Text="{Binding CompteStored.CodePostal, Mode=TwoWay}">
         </TextBox>
-        <TextBox x:Name="villeBox" RelativePanel.Below="cpBox"
+        <TextBox x:ConnectionId='17' x:Name="villeBox" RelativePanel.Below="cpBox"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="250"
                 Height="50"
@@ -102,7 +97,7 @@
                 Margin="5"
                 Text="{Binding CompteStored.Ville, Mode=TwoWay}">
         </TextBox>
-        <TextBox x:Name="paysBox" RelativePanel.Below="villeBox"
+        <TextBox x:ConnectionId='18' x:Name="paysBox" RelativePanel.Below="villeBox"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
                 Width="250"
                 Height="50"
@@ -110,22 +105,19 @@
                 Margin="5"
                 Text="{Binding CompteStored.Pays, Mode=TwoWay}">
         </TextBox>
-        <CommandBar x:Name="AppCommandBar" RelativePanel.AlignBottomWithPanel="True"
+        <CommandBar x:ConnectionId='19' x:Name="AppCommandBar" RelativePanel.AlignBottomWithPanel="True"
 RelativePanel.AlignHorizontalCenterWithPanel="True">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Name="Save"
+                <AppBarButton x:ConnectionId='20' Name="Save"
  Icon="Save"
 Label="Save" Command="{Binding
 BtnModifyCompteCommand}"></AppBarButton>
-                <AppBarButton Name="Clear"
+                <AppBarButton x:ConnectionId='21' Name="Clear"
  Icon="ClearSelection"
 Label="Clear" Command="{Binding
 BtnClearCompteCommand}"></AppBarButton>
-                <AppBarButton Name="Add"
- Icon="Add"
-Label="Add" Command="{Binding
-BtnAddCompteCommand}"></AppBarButton>
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </RelativePanel>
 </Page>
+

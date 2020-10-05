@@ -1,6 +1,7 @@
 ﻿using ClientAllocine.Model;
 using ClientAllocine.Services;
 using ClientAllocine.Services.Implementation;
+using ClientAllocine.View;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Ioc;
@@ -12,35 +13,36 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 
-namespace ClientAllocine.ViewModel
+namespace ClientAllocine.ViewModel.CompteModel
 {
-    public class CompteViewModel : ViewModelBase
+    public class CompteViewModel : AbstractCompteViewModel
     {
-        private readonly IWSService<Compte> _wSService;
-        private string _errorLabelText;
-        private Compte _compteSearch;
         private string _emailSearch;
-        protected Visibility _errorLabelVisibility;
 
         public ICommand BtnSearchCommand { get; private set; }
-        public ICommand BtnClearCompteCommand { get; private set; }
-        public ICommand BtnModifyCompteCommand { get; private set; }
+        public ICommand BtnAddCompteCommand { get; private set; }
 
-        public CompteViewModel()
+        public CompteViewModel() : base()
         {
-            _wSService = SimpleIoc.Default.GetInstance<WSCompteService>();
             BtnSearchCommand = new RelayCommand(ActionSearch);
-            BtnClearCompteCommand = new RelayCommand(ActionClear);
-            BtnModifyCompteCommand = new RelayCommand(ActionUpdate);
+            BtnAddCompteCommand = new RelayCommand(ActionAdd);
+        }
+
+        private void ActionAdd()
+        {
+            RootPage r = (RootPage)Window.Current.Content;
+            SplitView sv = (SplitView)(r.Content);
+            (sv.Content as Frame).Navigate(typeof(CreationPage));
         }
 
         private async void ActionSearch()
         {
             Compte result = await _wSService.GetByStringAsync(EmailSearch);
-            if(result != null)
+            if (result != null)
             {
-                CompteSearch = result;
+                CompteStored = result;
                 ErrorLabelText = "";
                 ErrorLabelVisibility = Visibility.Collapsed;
             }
@@ -51,11 +53,11 @@ namespace ClientAllocine.ViewModel
             }
         }
 
-        private async void ActionUpdate()
+        protected override async void ActionUpdate()
         {
             try
             {
-                await _wSService.UpdateCompteAsync(CompteSearch);
+                await _wSService.UpdateCompteAsync(CompteStored);
                 var messageDialog = new MessageDialog("Le compte a bien été modifié !");
 
                 messageDialog.Commands.Add(new UICommand(
@@ -67,54 +69,20 @@ namespace ClientAllocine.ViewModel
 
                 // Show the message dialog
                 await messageDialog.ShowAsync();
-            } catch(Exception)
+            }
+            catch (Exception)
             {
                 ErrorLabelText = "Echec de l'update du compte";
                 ErrorLabelVisibility = Visibility.Visible;
             }
         }
 
-        private void ActionClear()
-        {
-            CompteSearch = null;
-        }
-
-        public string ErrorLabelText
-        {
-            get { return _errorLabelText; }
-            set
-            {
-                _errorLabelText = value;
-                RaisePropertyChanged();
-            }
-        }
-        
-        public Compte CompteSearch
-        {
-            get { return _compteSearch; }
-            set
-            {
-                _compteSearch = value;
-                RaisePropertyChanged();
-            }
-        }
-        
         public string EmailSearch
         {
             get { return _emailSearch; }
             set
             {
                 _emailSearch = value;
-                RaisePropertyChanged();
-            }
-        }
-        
-        public Visibility ErrorLabelVisibility
-        {
-            get { return _errorLabelVisibility; }
-            set
-            {
-                _errorLabelVisibility = value;
                 RaisePropertyChanged();
             }
         }

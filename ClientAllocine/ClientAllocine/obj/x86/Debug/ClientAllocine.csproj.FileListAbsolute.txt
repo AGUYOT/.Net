@@ -68,3 +68,8 @@ C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\obj\x86\Debug\Vie
 C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\obj\x86\Debug\View\ComptePage.xaml
 C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\obj\x86\Debug\View\ComptePage.xbf
 C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\View\ComptePage.xbf
+C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\obj\x86\Debug\View\CreationPage.xaml
+C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\obj\x86\Debug\View\CreationPage.xbf
+C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\bin\x86\Debug\View\CreationPage.xbf
+C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\obj\x86\Debug\View\CreationPage.g.i.cs
+C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\obj\x86\Debug\View\CreationPage.g.cs

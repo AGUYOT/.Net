@@ -44,7 +44,7 @@
                 Width="250"
                 Height="50"
                 FontSize="30px"
-                Text="{Binding CompteSearch.Nom, Mode=TwoWay}">
+                Text="{Binding CompteStored.Nom, Mode=TwoWay}">
         </TextBox>
         <TextBlock x:ConnectionId='8' x:Name="prenomText" RelativePanel.Below="nomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Prénom
@@ -54,7 +54,7 @@
                 Width="250"
                 Height="50"
                 FontSize="30px"
-                Text="{Binding CompteSearch.Nom, Mode=TwoWay}">
+                Text="{Binding CompteStored.Prenom, Mode=TwoWay}">
         </TextBox>
         <TextBlock x:ConnectionId='10' x:Name="portableText" RelativePanel.Below="prenomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Portable
@@ -64,7 +64,7 @@
                 Width="250"
                 Height="50"
                 FontSize="30px"
-                Text="{Binding CompteSearch.TelPortable, Mode=TwoWay}">
+                Text="{Binding CompteStored.TelPortable, Mode=TwoWay}">
         </TextBox>
         <TextBlock x:ConnectionId='12' x:Name="mailText" RelativePanel.Below="portableBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Email
@@ -74,7 +74,7 @@
                 Width="500"
                 Height="50"
                 FontSize="30px"
-                Text="{Binding CompteSearch.Mel, Mode=TwoWay}">
+                Text="{Binding CompteStored.Mel, Mode=TwoWay}">
         </TextBox>
         <TextBlock x:ConnectionId='14' x:Name="adresseText" RelativePanel.Below="mailBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
         Adresse (Rue, CP, Ville, Pays)
@@ -84,7 +84,7 @@
                 Width="500"
                 Height="50"
                 FontSize="30px"
-                Text="{Binding CompteSearch.Rue, Mode=TwoWay}">
+                Text="{Binding CompteStored.Rue, Mode=TwoWay}">
         </TextBox>
         <TextBox x:ConnectionId='16' x:Name="cpBox" RelativePanel.Below="rueBox"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -92,7 +92,7 @@
                 Height="50"
                 FontSize="30px"
                 Margin="5"
-                Text="{Binding CompteSearch.CodePostal, Mode=TwoWay}">
+                Text="{Binding CompteStored.CodePostal, Mode=TwoWay}">
         </TextBox>
         <TextBox x:ConnectionId='17' x:Name="villeBox" RelativePanel.Below="cpBox"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -100,7 +100,7 @@
                 Height="50"
                 FontSize="30px"
                 Margin="5"
-                Text="{Binding CompteSearch.Ville, Mode=TwoWay}">
+                Text="{Binding CompteStored.Ville, Mode=TwoWay}">
         </TextBox>
         <TextBox x:ConnectionId='18' x:Name="paysBox" RelativePanel.Below="villeBox"
                 RelativePanel.AlignHorizontalCenterWithPanel="True"
@@ -108,7 +108,7 @@
                 Height="50"
                 FontSize="30px"
                 Margin="5"
-                Text="{Binding CompteSearch.Pays, Mode=TwoWay}">
+                Text="{Binding CompteStored.Pays, Mode=TwoWay}">
         </TextBox>
         <CommandBar x:ConnectionId='19' x:Name="AppCommandBar" RelativePanel.AlignBottomWithPanel="True"
 RelativePanel.AlignHorizontalCenterWithPanel="True">

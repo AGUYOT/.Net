@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using TP3WSRest.Models.EntityFramework;
@@ -9,9 +10,10 @@ using TP3WSRest.Models.EntityFramework;
 namespace TP3WSRest.Migrations
 {
     [DbContext(typeof(WSFilmsContext))]
-    partial class WSFilmsContextModelSnapshot : ModelSnapshot
+    [Migration("20201005121939_update-password-length")]
+    partial class updatepasswordlength
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

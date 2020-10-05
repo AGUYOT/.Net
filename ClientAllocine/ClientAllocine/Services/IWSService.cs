@@ -11,6 +11,7 @@ namespace ClientAllocine.Services
     {
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByStringAsync(string param);
-        Task UpdateCompteAsync(Compte compte);
+        Task UpdateCompteAsync(T compte);
+        Task<T> CreateCompteAsync(T compte);
     }
 }
