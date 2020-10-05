@@ -1,0 +1,130 @@
+﻿<Page
+    x:Class="ClientAllocine.View.ComptePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ClientAllocine.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <TextBlock x:Name="convertText" FontSize="70px" Margin="15">
+            Recherche de Compte
+        </TextBlock>
+        <TextBlock x:Name="errorText" FontSize="40px" RelativePanel.Below="convertText"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True"
+                   Margin="20"
+                   FontStyle="Normal"
+                   Foreground="Red"
+                   Visibility="{Binding ErrorLabelVisibility, Mode=OneWay}"
+                   Text="{Binding ErrorLabelText, Mode=OneWay}">
+        </TextBlock>
+        <TextBlock x:Name="searchText" RelativePanel.LeftOf="searchBox" RelativePanel.AlignVerticalCenterWith="searchBox" FontSize="30px" >
+        Mail :
+        </TextBlock>
+        <TextBox x:Name="searchBox" RelativePanel.Below="errorText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="500"
+                Height="50"
+                FontSize="30px"
+                Text="{Binding EmailSearch, Mode=TwoWay}">
+        </TextBox>
+        <Button RelativePanel.RightOf="mailBox" Width="250" RelativePanel.AlignVerticalCenterWith="searchBox"
+                Height="50" FontSize="30"
+                Command="{Binding BtnSearch}">
+            Rechercher
+        </Button>
+        <TextBlock x:Name="nomText" RelativePanel.Below="searchBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        Nom
+        </TextBlock>
+        <TextBox x:Name="nomBox" RelativePanel.Below="nomText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="250"
+                Height="50"
+                FontSize="30px"
+                Text="{Binding CompteSearch.Nom, Mode=TwoWay}">
+        </TextBox>
+        <TextBlock x:Name="prenomText" RelativePanel.Below="nomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        Prénom
+        </TextBlock>
+        <TextBox x:Name="prenomBox" RelativePanel.Below="prenomText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="250"
+                Height="50"
+                FontSize="30px"
+                Text="{Binding CompteSearch.Nom, Mode=TwoWay}">
+        </TextBox>
+        <TextBlock x:Name="portableText" RelativePanel.Below="prenomBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        Portable
+        </TextBlock>
+        <TextBox x:Name="portableBox" RelativePanel.Below="portableText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="250"
+                Height="50"
+                FontSize="30px"
+                Text="{Binding CompteSearch.TelPortable, Mode=TwoWay}">
+        </TextBox>
+        <TextBlock x:Name="mailText" RelativePanel.Below="portableBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        Email
+        </TextBlock>
+        <TextBox x:Name="mailBox" RelativePanel.Below="mailText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="500"
+                Height="50"
+                FontSize="30px"
+                Text="{Binding CompteSearch.Mel, Mode=TwoWay}">
+        </TextBox>
+        <TextBlock x:Name="adresseText" RelativePanel.Below="mailBox" RelativePanel.AlignHorizontalCenterWithPanel="True" FontSize="30px" >
+        Adresse (Rue, CP, Ville, Pays)
+        </TextBlock>
+        <TextBox x:Name="rueBox" RelativePanel.Below="adresseText"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="500"
+                Height="50"
+                FontSize="30px"
+                Text="{Binding CompteSearch.Rue, Mode=TwoWay}">
+        </TextBox>
+        <TextBox x:Name="cpBox" RelativePanel.Below="rueBox"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="100"
+                Height="50"
+                FontSize="30px"
+                Margin="5"
+                Text="{Binding CompteSearch.CodePostal, Mode=TwoWay}">
+        </TextBox>
+        <TextBox x:Name="villeBox" RelativePanel.Below="cpBox"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="250"
+                Height="50"
+                FontSize="30px"
+                Margin="5"
+                Text="{Binding CompteSearch.CodePostal, Mode=TwoWay}">
+        </TextBox>
+        <TextBox x:Name="paysBox" RelativePanel.Below="villeBox"
+                RelativePanel.AlignHorizontalCenterWithPanel="True"
+                Width="250"
+                Height="50"
+                FontSize="30px"
+                Margin="5"
+                Text="{Binding CompteSearch.CodePostal, Mode=TwoWay}">
+        </TextBox>
+        <CommandBar x:Name="AppCommandBar" RelativePanel.AlignBottomWithPanel="True"
+RelativePanel.AlignHorizontalCenterWithPanel="True">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Name="Save"
+ Icon="Save"
+Label="Save" Command="{Binding
+BtnModifyCompteCommand}"></AppBarButton>
+                <AppBarButton Name="Clear"
+ Icon="ClearSelection"
+Label="Clear" Command="{Binding
+BtnClearCompteCommand}"></AppBarButton>
+                <AppBarButton Name="Add"
+ Icon="Add"
+Label="Add" Command="{Binding
+BtnAddCompteCommand}"></AppBarButton>
+            </CommandBar.PrimaryCommands>
+        </CommandBar>
+    </RelativePanel>
+</Page>

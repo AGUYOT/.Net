@@ -4,7 +4,9 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Linq;
 using TP3WSRest.Controllers;
+using TP3WSRest.Models.DataManager;
 using TP3WSRest.Models.EntityFramework;
+using TP3WSRest.Models.Repository;
 
 namespace TestTP3WSRest
 {
@@ -13,12 +15,14 @@ namespace TestTP3WSRest
     {
         private readonly WSFilmsContext _context;
         private ComptesController _controller;
+        private IDataRepository<Compte> _dataRepository;
 
         public ApiTest()
         {
             var builder = new DbContextOptionsBuilder<WSFilmsContext>().UseNpgsql("Server=localhost;port=5432;Database=WSFilms; uid=postgres; password=postgres;");
             _context = new WSFilmsContext(builder.Options);
-            _controller = new ComptesController(_context);
+            _dataRepository = new CompteManager(_context);
+            _controller = new ComptesController(_dataRepository);
         }
 
         [TestMethod]

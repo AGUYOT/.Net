@@ -1,0 +1,1 @@
+C:\Users\Etudiant\Documents\.Net\ClientAllocine\ClientAllocine\ClientAllocine.csproj;x86

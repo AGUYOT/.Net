@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientAllocine", "ClientAllocine\ClientAllocine.csproj", "{4ADED1B3-36B0-4784-8248-C18A941AB1DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|ARM64 = Debug|ARM64
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|ARM64 = Release|ARM64
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|ARM.ActiveCfg = Debug|ARM
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|ARM.Build.0 = Debug|ARM
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|ARM.Deploy.0 = Debug|ARM
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|ARM64.ActiveCfg = Debug|ARM64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|ARM64.Build.0 = Debug|ARM64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|ARM64.Deploy.0 = Debug|ARM64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|x64.ActiveCfg = Debug|x64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|x64.Build.0 = Debug|x64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|x64.Deploy.0 = Debug|x64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|x86.ActiveCfg = Debug|x86
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|x86.Build.0 = Debug|x86
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Debug|x86.Deploy.0 = Debug|x86
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|ARM.ActiveCfg = Release|ARM
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|ARM.Build.0 = Release|ARM
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|ARM.Deploy.0 = Release|ARM
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|ARM64.ActiveCfg = Release|ARM64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|ARM64.Build.0 = Release|ARM64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|ARM64.Deploy.0 = Release|ARM64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|x64.ActiveCfg = Release|x64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|x64.Build.0 = Release|x64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|x64.Deploy.0 = Release|x64
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|x86.ActiveCfg = Release|x86
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|x86.Build.0 = Release|x86
+		{4ADED1B3-36B0-4784-8248-C18A941AB1DF}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7ACEE0C0-FB8C-4EEB-84B2-39DE070863B6}
+	EndGlobalSection
+EndGlobal

@@ -13,7 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using TP3WSRest.Models.DataManager;
 using TP3WSRest.Models.EntityFramework;
+using TP3WSRest.Models.Repository;
 
 namespace TP3WSRest
 {
@@ -46,6 +48,8 @@ namespace TP3WSRest
                ".xml");
                 c.IncludeXmlComments(xmlFile);
             });
+
+            services.AddScoped<IDataRepository<Compte>, CompteManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
