@@ -18,6 +18,7 @@ namespace TP3WSRest.Models.EntityFramework
         public WSFilmsContext(DbContextOptions<WSFilmsContext> options)
             : base(options)
         {
+            
         }
 
         public virtual DbSet<Film> Films { get; set; }
